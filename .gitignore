@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Security Environment Variables
+.env
+
+# Virtual environment
+venv/
+.venv/
+
+# Docker container
+*.tar
+*.tar.gz
+*.zip
+
+# IDE specific files
+.idea/
+.vscode/
+
+/data/*.json
+
+logs/
+*.log
+
+# Temporary files
+*.bak
+*.tmp
+.DS_Store # For macOS users
+
+*.png
+*.svg

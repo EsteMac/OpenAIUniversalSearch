@@ -1,0 +1,49 @@
+===== DEPLOYING THE APPLICATION =====
+
+How to Deploy "UniversalSearch" App
+
+This guide provides step-by-step instructions on how to deploy Estevan's "UniversalSearch" application on your machine using a Docker image saved as a .tar file. These instructions are applicable for both Mac and Windows operating systems.
+
+Prerequisites
+
+Docker: Ensure Docker is installed on your system. If it's not already installed, you can download and install Docker from Docker's official website. https://www.docker.com/products/docker-desktop
+
+Steps to Deploy the App
+
+1. Transfer the Docker Image File
+- Obtain the universalsearch.tar file from the source provided (e.g., via email, file transfer service, USB drive).
+- Save the file to a known location on your machine.
+
+2. Open Terminal or Command Prompt
+- On Mac: Use Spotlight (Cmd + Space) to search for "Terminal".
+- On Windows: Press Win + R, type cmd, and hit Enter.
+
+3. Load the Docker Image
+- Navigate to the directory where you saved universalsearch.tar. For example:
+   - On Mac or Windows Command Prompt: cd path/to/directory
+- Load the Docker image into your Docker system with the following command:
+
+docker load -i universalsearch.tar
+
+4. Run the Docker Container
+- After loading the image, run it as a container with the following command:
+
+docker run -p 4000:80 universalsearch
+
+This command maps port 80 inside the container to port 4000 on your host machine.
+
+5. Access the Application
+- Open a web browser and navigate to http://localhost:4000. You should now be able to access the "UniversalSearch" application.
+
+6. Stopping the Container (Optional)
+- If you need to stop the running Docker container, open a new terminal or command prompt window.
+- List all running containers with docker ps.
+- Find the container ID of "UniversalSearch", then execute docker stop [container ID].
+
+Troubleshooting
+
+- Docker Not Running: Ensure Docker Desktop is running on your machine before executing Docker commands.
+
+- Port Conflict: If port 4000 is already in use on your system, you can map the container to a different port by changing 4000 to another port number in the docker run command.
+
+Enjoy the application!
